@@ -7,6 +7,8 @@
 <script src="{{site.baseurl}}/assets/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 <script>
     lightbox.option({
@@ -14,4 +16,39 @@
       'wrapAround': true
     })
   </script>
-  
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+      const codeBlocks = document.querySelectorAll('pre code');
+
+      codeBlocks.forEach((codeBlock) => {
+          const container = document.createElement('div');
+          container.className = 'copy-code-container';
+
+          const button = document.createElement('button');
+          button.className = 'copy-code-button primary_btn'; // Add the 'primary_btn' class here
+          button.textContent = 'Copy Code';
+
+          button.addEventListener('click', () => {
+              const textArea = document.createElement('textarea');
+              textArea.value = codeBlock.innerText;
+              document.body.appendChild(textArea);
+              textArea.select();
+              document.execCommand('copy');
+              document.body.removeChild(textArea);
+
+              // Change the button text to "Copied!" for a short duration
+              const originalText = button.textContent;
+              button.textContent = 'Copied!';
+              
+              setTimeout(() => {
+                  button.textContent = originalText;
+              }, 1000); // Adjust the duration as needed
+          });
+
+          container.appendChild(button);
+
+          codeBlock.parentNode.insertBefore(container, codeBlock.nextSibling);
+      });
+  });
+</script>
