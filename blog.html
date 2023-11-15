@@ -19,7 +19,8 @@ layout: default
 								{% endfor %}
 
 								<span class="post-date"><a href="#"><time class="entry-date"
-											datetime="2012-11-09T23:15:57+00:00">{{ post.date | date: "%B %d, %Y" }} - {{ post.date | date: "%I:%M %p" }}</time></a></span>
+											datetime="2012-11-09T23:15:57+00:00">{{ post.date | date: "%B %d, %Y" }} -
+											{{ post.date | date: "%I:%M %p" }}</time></a></span>
 
 								<span class="post-author"><a href="#">{{ post.author_name }}</a></span>
 
@@ -36,20 +37,20 @@ layout: default
 					</article>
 					{% endfor %}
 
-					
+
 				</main>
 				<aside class="col-md-4">
 					<div class="widget widget-recent-posts">
 						<h3 class="widget-title">Recent Posts</h3>
 						<ul>
-						  {% for post in site.posts limit:5 reversed %}
+							{% for post in site.posts limit:5 reversed %}
 							<li>
-							  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+								<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							</li>
-						  {% endfor %}
+							{% endfor %}
 						</ul>
-					  </div>
-					  
+					</div>
+
 					<div class="widget widget-archives">
 						<h3 class="widget-title">Archives</h3>
 						<ul>
@@ -68,9 +69,14 @@ layout: default
 					<div class="widget widget-category">
 						<h3 class="widget-title">Category</h3>
 						<ul>
+							{% for post in site.posts %}
+							
+							{% for category in post.categories %}
 							<li>
-								<a href="#">Web Design</a>
+								<a href="#">{{ category }}</a>
 							</li>
+							{% endfor %}
+							{% endfor %}
 							<li>
 								<a href="#">Web Development</a>
 							</li>

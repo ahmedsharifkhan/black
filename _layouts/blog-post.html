@@ -4,6 +4,15 @@ layout: default
 
 		<div class="content-body">
 			<div class="container">
+				<div class="container">
+					<!-- Image -->
+					<a href="{{ page.image | relative_url }}" data-lightbox="{{ page.id }}" data-title="{{ post.title }}">
+						<img src="{{ page.image | relative_url }}" style="border-radius: 2rem;" alt="{{ page.title }}">
+					  </a>
+					  
+					<!-- <img src="{{ page.image }}" class="rounded mx-auto d-block img-fluid" style="border-radius: 2rem; width: 100%; max-height: 600px;"
+					  alt="{{ page.title }}"> -->
+				  </div>
 				<div class="row">
 					<main class="col-md-8">
 						<article class="post post-1">
@@ -30,18 +39,16 @@ layout: default
 						<div class="widget widget-recent-posts">		
 							<h3 class="widget-title">Recent Posts</h3>		
 							<ul>
-								<li>
-									<a href="#">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
-								</li>
-								<li>
-									<a href="#">Web Design is 95% Typography</a>
-								</li>
-								<li>
-									<a href="#">Paper by FiftyThree</a>
-								</li>
+								{% for post in site.posts limit:5 reversed %}
+							<li>
+							  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+							</li>
+						  {% endfor %}
+								
+								
 							</ul>
 						</div>
-						<div class="widget widget-archives">		
+						<!-- <div class="widget widget-archives">		
 							<h3 class="widget-title">Archives</h3>		
 							<ul>
 								<li>
@@ -54,20 +61,17 @@ layout: default
 									<a href="#">January 2013</a>
 								</li>
 							</ul>
-						</div>
+						</div> -->
 
 						<div class="widget widget-category">		
 							<h3 class="widget-title">Category</h3>		
 							<ul>
+								{% for category in page.categories %}
 								<li>
-									<a href="#">Web Design</a>
+									<a href="#">{{ category }}</a>
 								</li>
-								<li>
-									<a href="#">Web Development</a>
-								</li>
-								<li>
-									<a href="#">SEO</a>
-								</li>
+								{% endfor %}
+								
 							</ul>
 						</div>
 					</aside>
