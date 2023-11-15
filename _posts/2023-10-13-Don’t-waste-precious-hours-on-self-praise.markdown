@@ -128,3 +128,13 @@ Depending on the context, you may override as-needed (Option 1) or reset the box
   .reset-box-sizing();
 }
 ```
+
+
+```
+ruby
+puts "Hello, world!"
+```
+
+```
+If the code is highlighted with inline styles, it confirms that the issue is related to missing external stylesheets.
+```
