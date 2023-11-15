@@ -1,0 +1,14 @@
+<!-- _layouts/category.html -->
+---
+layout: default
+---
+
+<main class="col-md-8">
+    <h1>{{ page.title | capitalize }}</h1>
+    {% for post in site.categories[page.category] %}
+        <article>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+        </article>
+    {% endfor %}
+</main>

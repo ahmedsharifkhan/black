@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="content-body">
 	<div class="content-body">
 		<div class="container">
@@ -10,6 +9,12 @@ layout: default
 					{% for post in site.posts limit:40 reversed %}
 					<article class="post post-1">
 						<header class="entry-header">
+
+
+							<!-- <a class="entry-title" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}"
+									style="border-radius: 2rem;" width="100%" height="auto"
+									alt="{{ page.title }}"></a> -->
+
 							<h1 class="entry-title">
 								<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							</h1>
@@ -39,7 +44,7 @@ layout: default
 
 
 				</main>
-				<aside class="col-md-4">
+				<aside class="col-md-4" style="position: sticky; top: 0;">
 					<div class="widget widget-recent-posts">
 						<h3 class="widget-title">Recent Posts</h3>
 						<ul>
@@ -69,20 +74,29 @@ layout: default
 					<div class="widget widget-category">
 						<h3 class="widget-title">Category</h3>
 						<ul>
+							<!-- {% assign unique_categories = "" | split: "," %}
+
 							{% for post in site.posts %}
-							
 							{% for category in post.categories %}
+							{% unless unique_categories contains category %}
 							<li>
 								<a href="#">{{ category }}</a>
 							</li>
+							{% assign unique_categories = unique_categories | push: category %}
+							{% endunless %}
 							{% endfor %}
-							{% endfor %}
-							<li>
-								<a href="#">Web Development</a>
-							</li>
-							<li>
-								<a href="#">SEO</a>
-							</li>
+							{% endfor %} -->
+
+							{% assign unique_categories = "" | split: "," %}
+
+							<main class="col-md-8">
+								<h1>Categories</h1>
+								<ul>
+									{% for category in site.categories %}
+									<li><a href="#">{{
+											category[0] | capitalize }}</a></li>
+									{% endfor %}
+								</ul>
 						</ul>
 					</div>
 				</aside>

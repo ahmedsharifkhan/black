@@ -1,0 +1,49 @@
+title: About Me
+description: |
+    <section id="about">
+        
+        <p>Hello, I'm <strong>Ahmed Sharif Khan Noor</strong>, a passionate digital marketer and graphics designer with a creative flair and a strategic mindset. I thrive on turning innovative ideas into compelling visual stories that resonate with audiences.</p>
+    </section>
+
+    <section id="digital-marketing">
+        <h2>Digital Marketing Expertise</h2>
+        <p>In the ever-evolving landscape of digital marketing, I bring a wealth of experience in creating impactful online campaigns. From social media strategies that engage and grow communities to data-driven insights that optimize marketing performance, my goal is to elevate your brand in the digital sphere.</p>
+    </section>
+
+    <section id="graphics-design">
+        <h2>Graphics Design Creativity</h2>
+        <p>As a graphics designer, I specialize in translating concepts into visually stunning designs. Whether it's crafting eye-catching logos, designing captivating marketing materials, or developing cohesive brand identities, I believe in the power of design to make a lasting impression.</p>
+    </section>
+
+    <section id="why-work-with-me">
+        <h2>Why Work With Me?</h2>
+        <ul>
+            <li><strong>Innovative Solutions:</strong> I approach every project with fresh ideas and a commitment to delivering innovative solutions tailored to your brand.</li>
+            <li><strong>Strategic Approach:</strong> My digital marketing strategies are not only creative but also driven by data and a deep understanding of audience behavior.</li>
+            <li><strong>Visual Excellence:</strong> I bring a keen eye for aesthetics to my graphics design work, ensuring that every design element aligns seamlessly with your brand identity.</li>
+            <li><strong>Collaborative Partnership:</strong> I value collaboration and believe in working closely with clients to bring their visions to life. Your success is my priority.</li>
+        </ul>
+    </section>
+
+    <section id="lets-connect">
+        <h2>Let's Connect</h2>
+        <p>Whether you're looking to boost your online presence through digital marketing or seeking visually striking designs, I'm here to help. Let's collaborate and create something extraordinary together.</p>
+        <p>Feel free to explore my <a href="#your-portfolio-link">portfolio</a>, and don't hesitate to reach out if you have any questions or if you'd like to discuss your next project.</p>
+        <p>Thank you for considering me as your digital marketing and graphics design partner.</p>
+    </section>
+
+
+
+
+
+
+
+
+image: /assets/img/me.jpg
+social_link:
+  facebook_username: https://www.facebook.com/ahmedsharifkhannoor
+  twitter_username: https://www.twitter.com/maxnoor87
+  instagram_username: https://www.instagram.com/ahmedsharifkhannoor
+  linkedin_username: https://www.linkedin.com/in/ahmedsharifkhannoor
+  github_username: https://www.github.com/ahmedsharifkhan
+  youtube_username: https://www.youtube.com/channel/UCBfIS1RdIpSoS1e75LXJuxw
