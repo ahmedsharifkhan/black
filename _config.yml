@@ -1,0 +1,87 @@
+
+logo: WHITE'S WORLD
+title: Ahmed world is a portfolio site
+email: 
+start_year: 2023
+current_year: { { site.time | date: "%Y" } }
+description: 
+baseurl: /black # the subpath of your site, e.g. /blog
+url: https://ahmedsharifkhan.github.io # the base hostname & protocol for your site, e.g. http://example.com
+
+facebook_username: https://www.facebook.com/ahmedsharifkhannoor
+twitter_username: https://www.twitter.com/maxnoor87
+instagram_username: https://www.instagram.com/ahmedsharifkhannoor
+linkedin_username: https://www.linkedin.com/in/ahmedsharifkhannoor
+github_username: https://www.github.com/ahmedsharifkhan
+youtube_username: https://www.youtube.com/channel/UCBfIS1RdIpSoS1e75LXJuxw
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/blog/:title/"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+header_pages:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+  - title: Portfolio
+    url: /portfolio
+  - title: Noor
+    url: /noor
+
+google_analytics_id: G-W5KN8DPXQ9
+facebook_pixel_id: 1234567890
+
+gems:
+  - jekyll-sitemap
+# exclude:
+#   - excluded-page.html
+
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-admin
+  - jekyll-sitemap
+  - jekyll-feed
+
+
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/:num/'
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+host: 0.0.0.0
+port: 4000
